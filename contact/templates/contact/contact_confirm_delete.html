@@ -7,10 +7,10 @@
   <title>Kodemia Address Book</title>
 </head>
 <body>
-  <h1>Contacts</h1>
-  {% for contact in object_list %}    
-    <p>{{ contact.id }} {{ contact }}</p>
-    <!-- <p>{{ contact }}</p> -->
-  {% endfor %}
+  <h1>Are you sure you want to delete {{ object }}?</h1>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm</button>
+  </form>
 </body>
 </html>
