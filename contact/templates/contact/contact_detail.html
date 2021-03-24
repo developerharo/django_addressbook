@@ -10,6 +10,11 @@
   <h1>{{ object }}</h1>
   <p>phone: {{ object.phone }}</p>
   <p>email: {{ object.email }}</p>
-  <p>address: {{ object.address }}</p>  
+  <p>address: {{ object.address }}</p>
+
+  <p><a href="{% url 'contact_update' contact.pk %}">Edit contact</a></p>
+  <p><a href="{% url 'contact_delete' contact.pk %}">Delete contact</a></p>
+  <p><a href="{% url 'contact_list' %}">Back</a></p>
+
 </body>
 </html>

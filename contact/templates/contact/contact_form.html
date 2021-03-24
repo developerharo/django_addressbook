@@ -12,5 +12,6 @@
     {% csrf_token %} {{ form.as_p }}  
   <button type="submit">Submit</button>
   </form>  
+  <a href="{% url 'contact_list' %}">Back</a>
 </body>
 </html>
